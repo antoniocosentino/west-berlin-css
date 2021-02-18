@@ -1,0 +1,66 @@
+{
+    "options": {
+      "merge-default-rules": false,
+      "formatter": "html",
+      "output-file": "linters/sass-lint.html",
+      "max-warnings": 50
+    },
+    "rules": {
+      "extends-before-mixins": 2,
+      "extends-before-declarations": 2,
+      "placeholder-in-extend": 2,
+      "mixins-before-declarations": [
+        2,
+        {
+          "exclude": [
+            "breakpoint",
+            "mq"
+          ]
+        }
+      ],
+      "no-warn": 1,
+      "no-debug": 1,
+      "no-ids": 2,
+      "no-important": 2,
+      "hex-notation": [
+        2,
+        {
+          "style": "uppercase"
+        }
+      ],
+      "indentation": [
+        1,
+        {
+          "size": 4
+        }
+      ],
+      "property-sort-order": [
+        1,
+        {
+          "order": [
+            "display",
+            "margin"
+          ],
+          "ignore-custom-properties": true
+        }
+      ],
+      "variable-for-property": [
+        0,
+        {
+          "properties": [
+            "margin",
+            "content"
+          ]
+        }
+      ],
+      "quotes": [ 1, "single" ],
+      "no-css-comments": [ 1, true ],
+      "no-trailing-whitespace": [ 1, true ],
+      "pseudo-element": [ 1, true ],
+      "leading-zero": [ 1, true ],
+      "force-element-nesting": [ 1, true ],
+      "trailing-semicolon": [ 1, true ],
+      "force-pseudo-nesting": [ 1, true ],
+      "space-after-colon": [ 1, true ]
+    }
+  }
