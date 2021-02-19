@@ -9,13 +9,15 @@ body {
     align-items: center;
 }
 
+$helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+
 .musik-der-gegenwart {
 
     &.posterContainer {
         width: 1200px;
         height: 850px;
         margin-top: 20px;
-        box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+        box-shadow: rgba(50, 50, 93, .25) 0px 13px 27px -5px, rgba(0, 0, 0, .3) 0px 8px 16px -8px;
 
         .layout {
             display: flex;
@@ -24,7 +26,7 @@ body {
             box-sizing: border-box;
             padding: 10px;
             flex-direction: column;
-            background-image: url(./../images/samples/musik-der-gegenwart.jpg);
+            //background-image: url(./../images/samples/musik-der-gegenwart.jpg);
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -51,6 +53,7 @@ body {
                         border: 8px solid #000;
                         margin-top: 200px;
                         font-size: 0;
+                        z-index: 10;
 
                         &::after {
                             display: block;
@@ -67,6 +70,7 @@ body {
                         &.pipe-1 {
                             margin-left: 10px;
                             height: 562px;
+                            z-index: 11;
                         }
 
                         &.pipe-2 {
@@ -83,6 +87,7 @@ body {
 
                         &.pipe-5 {
                             height: 810px;
+                            z-index: 9;
                         }
 
                         &.pipe-6 {
@@ -91,6 +96,7 @@ body {
 
                         &.pipe-7 {
                             height: 950px;
+                            z-index: 9;
                         }
 
                         &.pipe-2,
@@ -113,7 +119,45 @@ body {
         }
 
         .bottomPart {
-            height: 22%;
+            height: 17%;
+            margin-top: 3%;
+            font-family: $helvetica;
+            text-align: left;
+
+            .textGrid {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 34% auto;
+                font-size: 14.5px;
+                font-weight: 500;
+
+                .block-1 {
+                    display: grid;
+                    grid-template-columns: 38% auto;
+                }
+
+                .block-2 {
+                    display: grid;
+                    grid-template-columns: 15% 14% 16% 15% 21% auto;
+                }
+
+                .block-3 {
+                    span {
+                        display: inline-block;
+                        margin: 0 2px;
+                        height: 46px;
+                        width: 4px;
+                        background-color: #000;
+                        vertical-align: sub;
+                    }
+                }
+
+                .block-3,
+                .block-4 {
+                    font-size: 62px;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }
