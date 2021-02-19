@@ -9,107 +9,111 @@ body {
     align-items: center;
 }
 
-.posterContainer {
-    width: 1200px;
-    height: 850px;
-    border: 1px solid #333;
-}
+.musik-der-gegenwart {
 
-.layout {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    flex-direction: column;
-    background-image: url(./../images/samples/musik-der-gegenwart.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+    &.posterContainer {
+        width: 1200px;
+        height: 850px;
+        margin-top: 20px;
+        box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
 
-.topPart {
-    border: 8px solid #000;
-    height: 78%;
-    overflow: hidden;
-}
+        .layout {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            flex-direction: column;
+            background-image: url(./../images/samples/musik-der-gegenwart.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
 
-.bottomPart {
-    height: 22%;
-}
+            .topPart {
+                border: 8px solid #000;
+                height: 80%;
+                overflow: hidden;
 
-.pipesContainer {
-    display: flex;
-    overflow: hidden;
-    width: 1400px;
-    height: 1400px;
-    position: relative;
-    align-items: flex-end;
-    transform: rotate(41deg) translateX(-255px) translateY(-240px);
-}
+                .pipesContainer {
+                    display: flex;
+                    overflow: hidden;
+                    width: 1400px;
+                    height: 1400px;
+                    position: relative;
+                    align-items: flex-end;
+                    transform: rotate(41deg) translateX(-255px) translateY(-240px);
 
-.pipe {
-    display: inline-block;
-    background: #BE2201;
-    box-sizing: border-box;
-    height: 700px;
-    width: 171px;
-    border: 8px solid #000;
-    margin-top: 200px;
-    font-size: 0;
+                    .pipe {
+                        display: inline-block;
+                        background: #BE2201;
+                        box-sizing: border-box;
+                        height: 700px;
+                        width: 171px;
+                        border: 8px solid #000;
+                        margin-top: 200px;
+                        font-size: 0;
 
-    &::after {
-        display: block;
-        content: '';
-        width: 171px;
-        height: 171px;
-        border-radius: 50%;
-        background: #000;
-        position: relative;
-        top: -85px;
-        left: -8px;
+                        &::after {
+                            display: block;
+                            content: '';
+                            width: 171px;
+                            height: 171px;
+                            border-radius: 50%;
+                            background: #000;
+                            position: relative;
+                            top: -85px;
+                            left: -8px;
+                        }
+
+                        &.pipe-1 {
+                            margin-left: 10px;
+                            height: 562px;
+                        }
+
+                        &.pipe-2 {
+                            height: 390px;
+                        }
+
+                        &.pipe-3 {
+                            height: 390px;
+                        }
+
+                        &.pipe-4 {
+                            height: 984px;
+                        }
+
+                        &.pipe-5 {
+                            height: 810px;
+                        }
+
+                        &.pipe-6 {
+                            height: 1263px;
+                        }
+
+                        &.pipe-7 {
+                            height: 950px;
+                        }
+
+                        &.pipe-2,
+                        &.pipe-3,
+                        &.pipe-4,
+                        &.pipe-5,
+                        &.pipe-6,
+                        &.pipe-7 {
+                            margin-left: -12px;
+                        }
+
+                        &.pipe-8 {
+                            position: absolute;
+                            left: 564px;
+                            height: 600px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottomPart {
+            height: 22%;
+        }
     }
-}
-
-.pipe-1 {
-    margin-left: 10px;
-    height: 562px;
-}
-
-.pipe-2 {
-    height: 390px;
-}
-
-.pipe-3 {
-    height: 390px;
-}
-
-.pipe-4 {
-    height: 984px;
-}
-
-.pipe-5 {
-    height: 810px;
-}
-
-.pipe-6 {
-    height: 1263px;
-}
-
-.pipe-7 {
-    height: 950px;
-}
-
-.pipe-2,
-.pipe-3,
-.pipe-4,
-.pipe-5,
-.pipe-6,
-.pipe-7 {
-    margin-left: -12px;
-}
-
-.pipe-8 {
-    position: absolute;
-    left: 564px;
-    height: 600px;
 }
