@@ -1,18 +1,18 @@
-var throttle = function(callback, limit) {
-	var wait = false;
-	return function() {
-		if (!wait) {
+const customThrottle = ( callback, limit ) => {
+	let wait = false;
+	return () => {
+		if ( !wait ) {
 			callback.call();
 			wait = true;
-			setTimeout(function() {
+			setTimeout( () => {
 				wait = false;
-			}, limit);
+			}, limit );
 		}
 	};
 };
 
 const scaleBasedOnViewport = () => {
-	const mainElement = document.querySelectorAll('.posterContainer')[0];
+	const mainElement = document.querySelectorAll( '.posterContainer' )[0];
     const originalWidth = mainElement.dataset.originalWidth;
     const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 
@@ -26,7 +26,7 @@ const scaleBasedOnViewport = () => {
 	}
 };
 
-const throttledScaleBasedOnViewport = throttle( scaleBasedOnViewport, 100 );
+const throttledScaleBasedOnViewport = customThrottle( scaleBasedOnViewport, 100 );
 
 document.addEventListener("DOMContentLoaded", scaleBasedOnViewport );
 window.addEventListener('resize', throttledScaleBasedOnViewport);
