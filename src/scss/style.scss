@@ -6,7 +6,7 @@ body {
 
 $helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
 
-.musik-der-gegenwart {
+.musik-der-gegenwart-1970 {
 
     &.posterContainer {
         width: 1200px;
@@ -22,7 +22,7 @@ $helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
             box-sizing: border-box;
             padding: 10px;
             flex-direction: column;
-            //background-image: url(./../images/samples/musik-der-gegenwart.jpg);
+            //background-image: url(./../images/samples/musik-der-gegenwart-1970.jpg);
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -153,6 +153,121 @@ $helvetica: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
                 .block-4 {
                     font-size: 62px;
                     font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.musik-der-gegenwart-1980 {
+
+    &.posterContainer {
+        width: 1200px;
+        height: 850px;
+        margin-top: 20px;
+        box-shadow: rgba(50, 50, 93, .25) 0px 13px 27px -5px, rgba(0, 0, 0, .3) 0px 8px 16px -8px;
+        transform-origin: top;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .layout {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            flex-direction: column;
+            background-image: url(./../images/samples/musik-der-gegenwart-1980.jpg);
+            background-color: #2B2871;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            .topPart {
+                height: 24%;
+                font-family: $helvetica;
+                text-align: left;
+
+                .textGrid {
+                    display: grid;
+                    width: 100%;
+                    grid-template-columns: 34% auto;
+                    font-size: 14.5px;
+                    font-weight: 500;
+
+                    .block-1 {
+                        display: grid;
+                        grid-template-columns: 38% auto;
+                    }
+
+                    .block-2 {
+                        display: grid;
+                        grid-template-columns: 15% 14% 16% 15% 21% auto;
+                    }
+
+                    .block-3 {
+
+                        padding-left: 10px;
+
+                        span {
+                            display: inline-block;
+                            margin: 0 2px;
+                            height: 46px;
+                            width: 4px;
+                            background-color: #000;
+                            vertical-align: sub;
+                        }
+                    }
+
+                    .block-3,
+                    .block-4 {
+                        font-size: 58px;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+
+            .bottomPart {
+                height: 80%;
+                overflow: hidden;
+                position: relative;
+
+                .line {
+                    height: 282px;
+                    width: 1222px;
+                    background-color: crimson;
+                    position: absolute;
+                    clip-path: url(#line-1);
+                    left: -99px;
+
+                    &.line-1 {
+                        top: 10px;
+                        clip-path: url(#line-1);
+                    }
+
+                    &.line-2 {
+                        top: 94px;
+                        clip-path: url(#line-1);
+                    }
+
+                    &.line-3 {
+                        top: 177px;
+                        clip-path: url(#line-1);
+                    }
+
+                    &.line-4 {
+                        top: 260px;
+                        clip-path: url(#line-1);
+                    }
+
+                    &.line-5 {
+                        top: 343px;
+                        clip-path: url(#line-1);
+                    }
                 }
             }
         }

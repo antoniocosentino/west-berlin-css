@@ -20,7 +20,7 @@ const CONFIG = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/musik-der-gegenwart.html",
+      template: "./src/musik-der-gegenwart-1980.html",
       filename: "./index.html",
       minify: {
         collapseWhitespace: true,
